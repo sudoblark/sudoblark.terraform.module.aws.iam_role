@@ -26,7 +26,7 @@ data "aws_iam_policy_document" "assume_policies" {
   for_each = { for role in var.raw_iam_roles : role.suffix => role }
 
   dynamic "statement" {
-    for_each = each.value["assume_policy_principles"]
+    for_each = length(each.value["assume_policy_principles"]) > 0 ? each.value["assume_policy_principles"] : []
 
     content {
       actions = ["sts:AssumeRole"]

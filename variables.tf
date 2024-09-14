@@ -33,6 +33,10 @@ REQUIRED
 ---- variable     : Value to test
 ---- values       : A list of strings, denoting what to test for
 
+OPTIONAL
+---------
+- path                  : Path to create the role and policies under, defaults to "/"
+
 - assume_policy_principles : A list of dictionaries where each dictionary defines a principle allowed to assume the role.
 -- Each dictionary in this list must define the following attributes:
 --- type          : A string defining what type the principle(s) is/are
@@ -42,9 +46,6 @@ REQUIRED
 ---- variable     : Value to test
 ---- values       : A list of strings, denoting what to test for
 
-OPTIONAL
----------
-- path                  : Path to create the role and policies under, defaults to "/"
 
 Constraints
 ---------------
@@ -70,7 +71,7 @@ EOF
           ), [])
         })
       ),
-      assume_policy_principles = list(
+      assume_policy_principles = optional(list(
         object({
           type        = string,
           identifiers = list(string),
@@ -82,7 +83,7 @@ EOF
             })
           ), [])
         })
-      )
+      ), [])
     })
   )
 }
