@@ -1,4 +1,10 @@
 # sudoblark.terraform.module.aws.iam_role
+[![CI](https://github.com/sudoblark/sudoblark.terraform.module.aws.iam_role/actions/workflows/commit-to-pr.yaml/badge.svg)](https://github.com/sudoblark/sudoblark.terraform.module.aws.iam_role/actions/workflows/commit-to-pr.yaml)
+[![Terraform Version](https://img.shields.io/badge/Terraform-1.7%2B-blueviolet?logo=terraform)](https://developer.hashicorp.com/terraform/)
+[![Registry](https://img.shields.io/badge/registry-pending-lightgrey)](https://registry.terraform.io/)
+[![License](https://img.shields.io/github/license/sudoblark/sudoblark.terraform.module.aws.iam_role)](https://github.com/sudoblark/sudoblark.terraform.module.aws.iam_role/blob/main/LICENSE.txt)
+
+
 Terraform module to create N number of IAM roles. - repo managed by sudoblark.terraform.github
 
 ## Developer documentation
